@@ -1,0 +1,28 @@
+\documentclass[10pt,twoside, openany]{extbook}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{fouriernc} % on utilise la police New Century Schoolbook
+\usepackage{geometry}
+\usepackage[Glenn]{fncychap}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{graphicx} % permets d'inserer des images
+\usepackage[colorlinks=true,
+    			linkcolor = black,
+    			urlcolor=cyan]{hyperref}
+
+\geometry{a5paper, left=20mm, right=20mm, top=20mm, bottom=20mm} %definit la taille des pages
+
+
+\fancyhead[RO]{\small{\textsf{\leftmark\ \hrulefill}}}
+\renewcommand\chaptermark[1]{\markboth{#1}{}}
+
+\pagestyle{fancy}
+\lhead[Chapitre \thechapter]{\Large{\textbf{\thepage}}}
+\rhead[\Large{\textbf{\thepage}}]{Partie \arabic{part}}
+\chead[\leftmark]{\Large{\montitre}}
+
+\let\oldpart\part
+\def\part{\setcounter{chapter}{0}\oldpart}
